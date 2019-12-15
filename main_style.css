@@ -1,0 +1,36 @@
+	<style>
+	#hheader {heght:0px;}
+	#header {
+		background-color:skyblue;
+		height:100px;
+		}
+	#nav {
+		background-color:skyblue;
+		width:300px;
+		height:350;
+		float:right;
+		}
+	#nav2 {
+		background-color:skyblue;
+		width:400px;
+		height:350;
+		float:left;
+		}
+	#section {
+		width:1500px;
+		text-align:center;
+		float:center;
+		padding:10px;
+		}
+	#footer {
+		background-color:orange;
+		height:100px;
+		clear:both;
+		}
+	#hheader, #header, #nav, #nav2, #section, #footer {text-align:center;}
+	#header, #footer {line-height:100px;}
+	h1 {font-size : 650%}
+	s1 {font-size : 200%}
+	s2 {font-size : 130%}
+	music {text-align:center;}
+</style>
