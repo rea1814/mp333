@@ -39,11 +39,10 @@ session_start();
 <div class="clear"></div>
 <br>
 	<p>
-	<input type=submit value="login">
-	<a href="main.php">login</a>
+	<input type="image" src="../img/login_button.gif">
 	</p>
 	<p>
-	<a href="member_form.php">join</a>
+	<input type="image" src="../img/join_button.gif"></a>
 	</p>
 	</div>
 </body>

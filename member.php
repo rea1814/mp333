@@ -3,7 +3,7 @@ $host='localhost';
 $user='root';
 $pw='1234';
 $dbName='mp3';
-$mysqli=new mysqli($host, $user, $passpw, $dbName);
+$mysqli=new mysqli($host, $user, $pw, $dbName);
 
 $id=$_POST['id'];
 $password=md5($_POST['pass']);

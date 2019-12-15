@@ -1,12 +1,12 @@
 <? 
-	session_start(); //세션함수를 만든다.
+	session_start(); 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head> 
 <meta charset="utf-8">
 <title>joinus</title>
-<style> //서식지정
+<style>
 	* {margin:0; padding:0;}
 	body {background:skyblue}
 
@@ -22,51 +22,51 @@
 
 </style>
 <script>
-   function check_id() //id 확인함수
+   function check_id()
    {
      window.open("check_id.php?id=" + document.member_form.id.value,
          "IDcheck",
           "left=200,top=200,width=200,height=60,scrollbars=no,resizable=yes");
    }
 
-   function check_nick() //별명 확인함수
+   function check_nick()
    {
      window.open("check_nick.php?nick=" + document.member_form.nick.value,
          "NICKcheck",
           "left=200,top=200,width=200,height=60,scrollbars=no,resizable=yes");
    }
 
-   function check_input() //입력 확인함수
+   function check_input()
    {
-      if (!document.member_form.id.value) //id를 입력하지 않았을때
+      if (!document.member_form.id.value)
       {
           alert("아이디를 입력하세요");    
           document.member_form.id.focus();
           return;
       }
 
-      if (!document.member_form.pass.value) //비밀번호를 입력하지 않았을때
+      if (!document.member_form.pass.value)
       {
           alert("비밀번호를 입력하세요");    
           document.member_form.pass.focus();
           return;
       }
 
-      if (!document.member_form.pass_confirm.value) //비밀번호 확인을 입력하지 않았을때
+      if (!document.member_form.pass_confirm.value)
       {
           alert("비밀번호확인을 입력하세요");    
           document.member_form.pass_confirm.focus();
           return;
       }
 
-      if (!document.member_form.name.value)  //이름을 입력하지 않았을때
+      if (!document.member_form.name.value)
       {
           alert("이름을 입력하세요");    
           document.member_form.name.focus();
           return;
       }
 
-      if (!document.member_form.nick.value) //닉네임을 입력하지 않았을때
+      if (!document.member_form.nick.value)
       {
           alert("닉네임을 입력하세요");    
           document.member_form.nick.focus();
@@ -74,7 +74,7 @@
       }
 
 
-      if (!document.member_form.hp2.value || !document.member_form.hp3.value ) //휴대폰번호를 입력하지 않았을때
+      if (!document.member_form.hp2.value || !document.member_form.hp3.value )
       {
           alert("휴대폰 번호를 입력하세요");    
           document.member_form.nick.focus();
@@ -82,7 +82,7 @@
       }
 
       if (document.member_form.pass.value != 
-            document.member_form.pass_confirm.value) //비밀번호가 일치하지 않을때
+            document.member_form.pass_confirm.value)
       {
           alert("비밀번호가 일치하지 않습니다.\n다시 입력해주세요.");    
           document.member_form.pass.focus();
@@ -93,7 +93,7 @@
       document.member_form.submit();
    }
 
-   function reset_form() //reset버튼을 눌렀을때
+   function reset_form()
    {
       document.member_form.id.value = "";
       document.member_form.pass.value = "";
@@ -116,24 +116,25 @@
 <body>
 		<div id="container" border="0">
 
-		<h1><legend><strong>join MP3!</strong></legend></h1>
+		<h1><legend><strong>MP3 가입 입력양식</strong></legend></h1>
 		<br>
-			<strong>name</strong><br>
+			<strong>이름</strong><br>
 			<input type="text" name="name">
 		<br>
-			<strong>id</strong><br>
+			<strong>아이디</strong><br>
 			<input type="text" name="id">
 		<br>
-			<strong>pwd</strong><br>
+			<strong>비밀번호</strong><br>
 			<input type="password" name="pass">
 		<br>
-			<strong>pwd confirm</strong><br>
+		<br>
+			<strong>비밀번호확인</strong><br>
 			<input type="password" name="pass_confirm">
 		<br>
-			<strong>nickname</strong><br>
+			<strong>별명</strong><br>
 			<input type="text" name="nick">
 		<br>
-			<strong>hp</strong><br>
+			<strong>전화번호</strong><br>
 			<select class="hp" name="hp1">
 	<option value='010'>010</option>
 	<option value='011'>011</option>
@@ -143,13 +144,13 @@
 	<option value='019'>019</option>
 			</select>  - <input type="text" class="hp" name="hp2"> - <input type="text" class="hp" name="hp3">
 		<br>
-			<strong>email</strong><br>
+			<strong>이메일</strong><br>
 			<input type="text" id="email1" name="email1"> @ <input type="text" name="email2">
 		<br><br>
-		<div id="button"><a href="login_form.php"><img src="../img/button_save.gif"  onclick="check_input()"></a>&nbsp;&nbsp;
-		                 <a href="member_form.php"><img src="../img/button_reset.gif" onclick="reset_form()"></a>
+		<div id="button"><a href="first.php"><img src="../img/button_save.gif"  onclick="check_input()"></a>&nbsp;&nbsp;
+		                 <a href="=first.php"><img src="../img/button_reset.gif" onclick="reset_form()"></a>
 	</div>
 
-		</div> <!--화면에뜨는입력양식>
+		</div>
 </body>
 </html>
